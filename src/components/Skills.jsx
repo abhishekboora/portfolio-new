@@ -7,13 +7,14 @@ const skills = [
     { name: 'JavaScript', icon: 'fab fa-js', color: 'text-yellow-500' },
     { name: 'React', icon: 'fab fa-react', color: 'text-sky-500' },
     { name: 'Node.js', icon: 'fab fa-node-js', color: 'text-green-600' },
+    { name: 'Express.js', icon: 'fas fa-server', color: 'text-gray-700' }, // Added Express.js
+    { name: 'MongoDB', icon: 'fas fa-leaf', color: 'text-green-700' }, // Added MongoDB with leaf icon
     { name: 'Tailwind CSS', icon: 'fas fa-wind', color: 'text-teal-500' },
     { name: 'Git', icon: 'fab fa-git-alt', color: 'text-orange-700' },
     { name: 'GitHub', icon: 'fab fa-github', color: 'text-gray-900' },
     { name: 'MySQL', icon: 'fas fa-database', color: 'text-blue-800' },
-    { name: 'Firebase', icon: 'fab fa-firebase', color: 'text-yellow-600' },
-    { name: 'SQL', icon: 'fas fa-server', color: 'text-gray-700' },
-    { name: 'WordPress', icon: 'fab fa-wordpress', color: 'text-blue-700' }, // Added WordPress skill
+    { name: 'SQL', icon: 'fas fa-terminal', color: 'text-gray-700' }, // Changed SQL icon to avoid duplication with database
+    { name: 'WordPress', icon: 'fab fa-wordpress', color: 'text-blue-700' },
 ];
 
 const Skills = () => {
@@ -25,8 +26,8 @@ const Skills = () => {
                     <div
                         key={skill.name}
                         className={`bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center
-                                    transition-all duration-300 transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl
-                                    ${index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'}`}
+                                        transition-all duration-300 transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl
+                                        ${index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'}`}
                         style={{ animationDelay: `${index * 0.1}s` }}
                     >
                         <i className={`${skill.icon} text-5xl ${skill.color} mb-4`}></i>
